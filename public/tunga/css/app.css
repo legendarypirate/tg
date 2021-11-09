@@ -1,0 +1,58 @@
+.flag{
+    height: 20px;
+    width:40px;
+}
+
+.comment{
+    background-image: url('img/bg.png');
+}
+
+.footer{
+    background-color:#EDEFF3;
+    margin-top:50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.body{
+    font-family: 'Rubik', sans-serif;
+}
+.nav-item{
+    margin-right:20px;
+}
+
+.search{
+    padding-top:16px;
+    margin-right:20px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+}
+.flagitem{
+    width:10px;
+}
+
+.flag-icon-mn{
+   background-image: url('img/flag.png');
+}
+
+.flag-icon-en{
+    background-image: url('img/eng.png');
+}
+.iconimg {
+    margin-left:15px;
+    margin-top:20px;
+    width: 50px;
+    
+}
+
+.saying{
+    height:200px;
+}
+.social{
+    margin-top:20px;
+}
+.blogs{
+    border:none;
+}
+
+
