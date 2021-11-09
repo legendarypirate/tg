@@ -258,12 +258,12 @@
   </div>
 </div>
 
-<div class="container-fluid " style="background-image: url('img/bg.png'); margin-top:50px; height:500px;">
+<div class="container-fluid " style="background-image: url('{{asset('tunga')}}/img/bg.png'); margin-top:50px; height:500px;">
     <section class="pt-5 pb-5 ">
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <h3 class="mb-3" style="color:white;">What our client says</h3>
+                    <h3 class="mb-3" style="color:white;">Харилцагч нарын сэтгэгдэл</h3>
                 </div>
             
                 <div class="col-12">

@@ -65,11 +65,11 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
 							<i class="la la-user"></i>
-							<span class="nav-text">Slider</span>
+							<span class="nav-text">Сэтгэгдэл</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{url('/slider/manage')}}">Устгах засах</a></li>
-                            <li><a href="{{url('/slider/save')}}">Slider нэмэх</a></li>
+                            <li><a href="{{url('/review/manage')}}">Устгах засах</a></li>
+                            <li><a href="{{url('/review/save')}}"> нэмэх</a></li>
                          
                            
                         </ul>

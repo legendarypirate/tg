@@ -27,12 +27,20 @@ Route::get('/prod/detail/{id?}', 'WebController@pdetail')->name( 'prod.detail');
 Auth::routes();
 
 
-Route::prefix('blog')->group(function(){
+    Route::prefix('blog')->group(function(){
     Route::get('/save', 'BlogController@index')->name('cat.save');
     Route::post('/save','BlogController@save');
     Route::get('/manage','BlogController@manage');
     Route::get('/edit/{id}','BlogController@edit');
     Route::post('/edit','BlogController@update');
     Route::get('/delete/{id}','BlogController@delete');
-                                   
-                        });
+                                    });
+
+    Route::prefix('review')->group(function(){
+    Route::get('/save', 'ReviewController@index')->name('review.save');
+    Route::post('/save','ReviewController@save');
+    Route::get('/manage','ReviewController@manage');
+    Route::get('/edit/{id}','ReviewController@edit');
+    Route::post('/edit','ReviewController@update');
+    Route::get('/delete/{id}','ReviewController@delete');
+                                             });

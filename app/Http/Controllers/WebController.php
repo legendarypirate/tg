@@ -10,6 +10,7 @@ use App\Http\Requests;
 use App\Mail\ContactForMail;
 use App\Form;
 use App\Anz;
+use App\Blog;
 
 use App\Http\Controllers;
 use Validator,Redirect,Response,File,Date;
@@ -137,12 +138,12 @@ class WebController extends Controller
     
    
    
-    public function hdetail(Request $request,$id)
+    public function detail(Request $request,$id)
     {
          
-        $chief = Chief::find($id); 
+        $blog = Blog::find($id); 
        
-        return view( 'web.history.detail', compact('chief'));
+        return view( 'web.blog.detail', compact('blog'));
     }
 
      /**
