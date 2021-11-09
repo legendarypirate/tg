@@ -1,73 +1,95 @@
 @extends('admin.master')
 
-
-@section('content-heading')
-  Сургалтын мэдээ оруулах 869x434
-
-  <br>
-  {{Session::get('message')}}
-
-@endsection
-
-
 @section('mainContent')
 
-<div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                   
-                                    {!! Form::open(['url' => 'course/save', 'method'=>'post', 'role'=>'form', 'files' => true, 'enctype'=>'multipart/form-data' ]) !!}
-                                      
-                                        <div class="form-group">
-                                            <label>Сургалт сонгох</label>
-                                            <select name="catid" class="form-control" required>
+<div class="content-body">
+            <!-- row -->
+            <div class="container-fluid">
+				    
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Art нэмэх</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Нүүр</a></li>
+                            <li class="breadcrumb-item active"><a href="add-professor.html">Дэд ангилал</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Нэмэх</a></li>
+                        </ol>
+                    </div>
+                </div>
+				
+				<div class="row">
+					<div class="col-xl-12 col-xxl-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+								<h5 class="card-title">Ерөнхий мэдээлэл</h5>
+							</div>
+							<div class="card-body">
+                            {!! Form::open(['url' => 'blog/save', 'method'=>'post', 'role'=>'form', 'files' => true, 'enctype'=>'multipart/form-data' ]) !!}
+									<div class="row">
                                          
-                                                <option value="1">Аялал жуучлалын боловсрол олгох сургалт</option>
-                                                <option value="2">Тур лидерийн сургалт</option>
-                                                <option value="3">Аялал жуулчлалын маркетингийн судалгаа ба сургалт
-</option>
-                                                <option value="4">Дотоодын аялал жуулчлалын сургалт</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Товч мэдээ</label>
-                                            <textarea  name="short" class="form-control my-editor" style="height:100px;"></textarea>
-                                       
-                                        </div>
-                                          <div class="form-group">
-                                            <label>Дэлгэрэнгүй</label>
-                                            <textarea  name="long" class="form-control my-editor" style="height:500px;"></textarea>
-                                       
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Хугацаа</label>
-                                            <input  name="term" class="form-control">
-                                       
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Хичээллэх цаг</label>
-                                            <input  name="time" class="form-control">
-                                       
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Зураг</label>
-                                            <input name="image1" class="form-control" type="file">
+                        
+
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<div class="form-group">
+												<label class="form-label">Гарчиг</label>
+												<input type="text" name="title" class="form-control">
+											</div>
+										</div>
+									    
+                    
+                    
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+											<div class="form-group">
+												<label class="form-label">Зураг</label>
+												<input type="file" name="image" class="form-control">
+											</div>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<label class="form-label">Мэдээ</label>
+											<textarea name="desc" class="form-control form-control my-editor" type="text" style="height:400px;"></textarea>
+											</div>
+										</div>
+
+
+                                 
+										
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<button type="submit" class="btn btn-primary">Хадгалах</button>
+											<button type="submit" class="btn btn-light">Болих</button>
                                         </div>
                                       
-                                        <div class="form-group">
-                                          
-                                            <input type="Submit" class="btn btn-block btn-primary" value="Илгээх">
-                                        </div>
-                                        {!! Form::close() !!}
-                                </div>
-                            </div> 
-</div>       
- <script src="https://cdn.tiny.cloud/1/cz24nt0wrcj7h0bezmv23sjdnrc7q1l9p22gj5ej74wm6s2n/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+									</div>
+                                    {!! Form::close() !!}
+						
+                            </div>
+							@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Алдаа гарлаа!</strong> 
+		<ul>
+        @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+        @endforeach
+		</ul>
+    </div>
+     @endif  
+                        </div>
+                    </div>
+				</div>
+            </div>
+        </div>
+        <script src="https://cdn.tiny.cloud/1/cz24nt0wrcj7h0bezmv23sjdnrc7q1l9p22gj5ej74wm6s2n/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
                     <script>
     tinymce.init({
       selector: 'textarea',
-      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker image code',
-      toolbar: 'a11ycheck addcomment imageupload bold italic formatselect alignleft aligncenter alignright alignjustify fontselect strikethrough showcomments casechange checklist code forecolor backcolor formatpainter pageembed permanentpen table link removeformat checklist image ',
+      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker image code print preview powerpaste casechange importcss tinydrive searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker imagetools textpattern noneditable help formatpainter permanentpen pageembed charmap tinycomments mentions quickbars linkchecker emoticons advtable',
+      toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment',
       toolbar_mode: 'floating',
       tinycomments_mode: 'embedded',
       tinycomments_author: 'Author name',
@@ -87,7 +109,6 @@
     var input = document.createElement('input');
     input.setAttribute('type', 'file');
     input.setAttribute('accept', 'image/*');
-
     /*
       Note: In modern browsers input[type="file"] is functional without
       even adding it to the DOM, but that might not be the case in some older
@@ -95,10 +116,8 @@
       just in case, and visually hide it. And do not forget do remove it
       once you do not need it anymore.
     */
-
     input.onchange = function () {
       var file = this.files[0];
-
       var reader = new FileReader();
       reader.onload = function () {
         /*
@@ -111,13 +130,11 @@
         var base64 = reader.result.split(',')[1];
         var blobInfo = blobCache.create(id, file, base64);
         blobCache.add(blobInfo);
-
         /* call the callback and populate the Title field with the file name */
         cb(blobInfo.blobUri(), { title: file.name });
       };
       reader.readAsDataURL(file);
     };
-
     input.click();
   },
   content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'

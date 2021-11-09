@@ -36,8 +36,8 @@ class BlogController extends Controller
        
        $prodEntry = new Blog();
        $prodEntry -> title = $request ->title; 
-       $prodEntry -> author =Auth::user()->name; 
-       $prodEntry -> header = $request ->header; 
+     
+    
        $prodEntry -> desc = $request ->desc; 
       
        $prodEntry -> image = 'image';

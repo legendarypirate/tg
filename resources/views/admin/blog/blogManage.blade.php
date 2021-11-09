@@ -42,9 +42,8 @@
 												<thead>
 													<tr>
 														<th>Дугаар</th>
-														<th>ID</th>
+												
 														<th>Гарчиг</th>
-														<th>Нийтлэлч</th>
 													
 														<th>Зураг</th>
 													
@@ -62,9 +61,9 @@
 												@foreach($genc as $datas)
 													<tr>
 														<td>{{++$i}}</td>
-														<td>{{$datas->id}}</td>
+													
 														<td>{{$datas->title}}</td>
-														<td>{{$datas->author}}</td>
+												
 														<td><img src="{{asset($datas->image)}}" width="60"  alt="no pic"></td>
 														
 													

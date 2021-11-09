@@ -66,7 +66,7 @@
       </form>
       <select class="selectpicker" data-width="fit">
     <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
-  <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
+  <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Mongolia</option>
 </select>
     </div>
   </div>

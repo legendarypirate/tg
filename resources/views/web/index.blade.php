@@ -25,21 +25,19 @@
 
                                 <div class="col-md-4 mb-3 col-sm-4 col-4">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                        <img class="img-fluid" alt="100%x280" src="{{asset('tunga')}}/img/blog.png">
                                       
 
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3 col-sm-4 col-4">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                      
+                                    <img class="img-fluid" alt="100%x280" src="{{asset('tunga')}}/img/blog.png">                                      
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3 col-sm-4 col-4">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
-                                     
+                                    <img class="img-fluid" alt="100%x280" src="{{asset('tunga')}}/img/blog.png">                                     
                                     </div>
                                 </div>
 
@@ -366,52 +364,23 @@
 </div>
 
 <div class="container-lg" style="margin-top:40px;">
-    
+    <?php $blog=DB::table('blogs')->get(); ?>
     <div class="row">
         <div class="col-12">
             <h3 class="mb-3">Blog </h3>
         </div>
-      
+      @foreach($blog as $blogs)
       <div class="col-lg-3 col-sm-12">
         <div class="card blogs" style="width: 18rem;border:none;">
-            <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
+            <img src="{{$blogs->image}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">{{$blogs->title}}</h5>
+              <p class="card-text">{!!$blogs->desc!!}</p>
+              <a href="{{ route('blog.detail',$blogs->id) }}" class="btn btn-primary">Унших</a>
             </div>
           </div>
       </div>
-      <div class="col-lg-3 col-sm-12">
-        <div class="card " style="width: 18rem;border:none;">
-            <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-      </div>
-      <div class="col-lg-3 col-sm-12">
-        <div class="card" style="width: 18rem;border:none;">
-            <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-      </div>
-      <div class="col-lg-3 col-sm-12">
-        <div class="card" style="width: 18rem;border:none;">
-            <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-      </div>
+      @endforeach
     </div>
   </div>
 
