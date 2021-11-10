@@ -67,19 +67,7 @@
                     </li>
               
 
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-user"></i>
-							<span class="nav-text">Featured artist </span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{url('/fartist/manage')}}">Устгах засах</a></li>
-                            <li><a href="{{url('/fartist/save')}}">Artist нэмэх</a></li>
-                         
-                           
-                        </ul>
-                    </li>
-              
-					
+                
 				
 					
                     
