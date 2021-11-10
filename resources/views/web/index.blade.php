@@ -127,134 +127,10 @@
             </div>
           </div>
     </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-             
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
+ 
+  
+   
+ 
   </div>
 </div>
 
@@ -263,7 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <h3 class="mb-3" style="color:white;">Харилцагч нарын сэтгэгдэл</h3>
+                    <h3 class="mb-3" style="color:white;">What our client says</h3>
                 </div>
             
                 <div class="col-12">

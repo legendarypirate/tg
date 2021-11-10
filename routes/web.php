@@ -53,3 +53,11 @@ Auth::routes();
                                                 Route::post('/edit','MemberController@update');
                                                 Route::get('/delete/{id}','MemberController@delete');
                                                                                          });
+                                                                                         Route::prefix('slider')->group(function(){
+                                                                                            Route::get('/save', 'SliderController@index')->name('slider.save');
+                                                                                            Route::post('/save','SliderController@save');
+                                                                                            Route::get('/manage','SliderController@manage');
+                                                                                            Route::get('/edit/{id}','SliderController@edit');
+                                                                                            Route::post('/edit','SliderController@update');
+                                                                                            Route::get('/delete/{id}','SliderController@delete');
+                                                                                                                                     });

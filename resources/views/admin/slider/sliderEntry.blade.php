@@ -9,7 +9,7 @@
                 <div class="row page-titles mx-0">
                     <div class="col-sm-6 p-md-0">
                         <div class="welcome-text">
-                            <h4>Гишүүн нэмэх</h4>
+                            <h4>Сэтгэгдэл  нэмэх</h4>
                         </div>
                     </div>
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
@@ -28,35 +28,17 @@
 								<h5 class="card-title">Ерөнхий мэдээлэл</h5>
 							</div>
 							<div class="card-body">
-                            {!! Form::open(['url' => 'member/save', 'method'=>'post', 'role'=>'form', 'files' => true, 'enctype'=>'multipart/form-data' ]) !!}
+                            {!! Form::open(['url' => 'slider/save', 'method'=>'post', 'role'=>'form', 'files' => true, 'enctype'=>'multipart/form-data' ]) !!}
 									<div class="row">
                                          
                         
 
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Нэр</label>
-												<input type="text" name="name" class="form-control">
-											</div>
-										</div>
-									    
-                    
-                    
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
 											<div class="form-group">
 												<label class="form-label">Зураг</label>
 												<input type="file" name="image" class="form-control">
 											</div>
 										</div>
-										<div class="col-lg-12 col-md-12 col-sm-12">
-											<div class="form-group">
-												<label class="form-label">Мэдээ</label>
-											<textarea name="info" class="form-control form-control my-editor" type="text" style="height:400px;"></textarea>
-											</div>
-										</div>
-
-
                                  
 										
 										<div class="col-lg-12 col-md-12 col-sm-12">

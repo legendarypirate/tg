@@ -15,42 +15,9 @@
                     </li>
 			
                 
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-user"></i>
-							<span class="nav-text">Art</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{url('/prod/manage')}}">Устгах засах</a></li>
-                            <li><a href="{{url('/prod/save')}}">Art нэмэх</a></li>
-                         
-                           
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-user"></i>
-							<span class="nav-text">Хэрэглэгч</span>
-						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{url('/user/manage')}}">Устгах засах</a></li>
-                            <li><a href="{{url('/user/save')}}">Хэрэглэгч нэмэх</a></li>
-                         
-                           
-                        </ul>
-                    </li>
+                  
                     
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-							<i class="la la-user"></i>
-							<span class="nav-text">Artist</span>
-						</a>
-                        <ul aria-expanded="false">
-                              <li><a href="{{url('/artist/manage')}}">Устгах засах</a></li>
-                            <li><a href="{{url('/artist/save')}}">Artist нэмэх</a></li>
-                    
-                         
-                           
-                        </ul>
-                    </li>
-
+                   
 
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
 							<i class="la la-user"></i>
