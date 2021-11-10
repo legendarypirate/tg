@@ -52,13 +52,13 @@
                     </li>
 
 
-  <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
 							<i class="la la-user"></i>
-							<span class="nav-text">Order</span>
+							<span class="nav-text">Гишүүд</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{url('/order/manage')}}">Устгах засах</a></li>
-                          
+                            <li><a href="{{url('/member/manage')}}">Устгах засах</a></li>
+                            <li><a href="{{url('/member/save')}}">Нэмэх</a></li>
                          
                            
                         </ul>

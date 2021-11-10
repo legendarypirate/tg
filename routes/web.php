@@ -44,3 +44,12 @@ Auth::routes();
     Route::post('/edit','ReviewController@update');
     Route::get('/delete/{id}','ReviewController@delete');
                                              });
+
+                                             Route::prefix('member')->group(function(){
+                                                Route::get('/save', 'MemberController@index')->name('member.save');
+                                                Route::post('/save','MemberController@save');
+                                                Route::get('/manage','MemberController@manage');
+                                                Route::get('/edit/{id}','MemberController@edit');
+                                                Route::post('/edit','MemberController@update');
+                                                Route::get('/delete/{id}','MemberController@delete');
+                                                                                         });
