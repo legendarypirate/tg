@@ -40,23 +40,29 @@
 <div class="container">
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col-12 col-md-12">
-        <h3 class="mb-3">Бүтээгдэхүүн үйлчилгээ </h3>
+        <h3 class="mb-3 prod-head">Бүтээгдэхүүн үйлчилгээ </h3>
+        <hr class="prod" style=" height:10px;color:#0e4a6b;">
     </div>
     <div class="col">
+        @foreach($product as $products)
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
-              <div class="col-md-2">
-                <img src="img/icons.png" class="img-fluid rounded-start iconimg" alt="...">
-              </div>
-              <div class="col-md-10">
+            
+              <div class="col-md-12">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-title" style="padding-left:20px;">{{$products->title}}</h5>
+                  <div class="card-text" style="overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  text-overflow: ellipsis;padding: 0 20px 0;line-height:1.5;color:#7C849D;  text-align: justify;
+  text-justify: inter-word;"> {!!$products->desc!!}</div>
             
                 </div>
               </div>
             </div>
-          </div>
+        </div>
+        @endforeach
     </div>
  
   
@@ -191,5 +197,6 @@
     </div>
   </div>
 
+  
 @endsection
  

@@ -30,6 +30,18 @@
 .flagitem{
     width:10px;
 }
+.prod-head{
+    font-weight: 700;
+    text-align: center;
+  
+  
+}
+.prod{
+  
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .flag-icon-mn{
    background-image: url('img/flag.png');

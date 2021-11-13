@@ -1,5 +1,6 @@
 <?php
 use App\Slider;
+use App\Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,8 @@ use App\Slider;
 
 Route::get('/', function () {
     $slider=Slider::All();
-    return view('web.index', compact('slider'));
+    $product=Product::All();
+    return view('web.index', compact('slider','product'));
 })->name('index');
 Route::get('/about', 'WebController@about')->name('about');
 Route::get('/blog', 'WebController@blog')->name('blog');
