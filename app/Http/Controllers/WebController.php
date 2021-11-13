@@ -9,7 +9,7 @@ use App\Http\Requests;
 
 use App\Mail\ContactForMail;
 use App\Form;
-use App\Anz;
+use App\Member;
 use App\Blog;
 
 use App\Http\Controllers;
@@ -56,8 +56,8 @@ class WebController extends Controller
     
   public function about()
     {
-       
-        return view('web.about');
+         $member=Member::All();
+        return view('web.about', compact('member'));
     }  
     
     

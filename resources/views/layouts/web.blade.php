@@ -37,7 +37,8 @@
   filter: none;
 }
 #owl-demo .owl-item {
-  margin: 3px;
+  margin-right: 5px;
+  
 }
 #owl-demo .owl-item img {
   display: block;

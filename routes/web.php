@@ -61,3 +61,11 @@ Auth::routes();
                                                                                             Route::post('/edit','SliderController@update');
                                                                                             Route::get('/delete/{id}','SliderController@delete');
                                                                                                                                      });
+                                                                                                                                     Route::prefix('event')->group(function(){
+                                                                                                                                        Route::get('/save', 'EventController@index')->name('event.save');
+                                                                                                                                        Route::post('/save','EventController@save');
+                                                                                                                                        Route::get('/manage','EventController@manage');
+                                                                                                                                        Route::get('/edit/{id}','EventController@edit');
+                                                                                                                                        Route::post('/edit','EventController@update');
+                                                                                                                                        Route::get('/delete/{id}','EventController@delete');
+                                                                                                                                                                                 });

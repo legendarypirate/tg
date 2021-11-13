@@ -28,9 +28,28 @@ class EventController extends Controller
     public function save(Request $request){
  
        $prodEntry = new Event();
-       $prodEntry -> name = $request ->name; 
+       $prodEntry -> title = $request ->title; 
        $prodEntry -> desc = $request ->desc; 
+       $prodEntry -> date = $request ->date; 
+       $prodEntry -> image = 'image';
        $prodEntry -> save();  
+
+       $lastId=$prodEntry->id;
+
+       $pictureInfo=$request->file('image');
+         
+       $picName = $lastId.$pictureInfo->getClientOriginalName();
+       
+       $folder="eventImage/";
+
+       $pictureInfo->move($folder,$picName);
+
+       $picUrl=$folder.$picName;
+
+       $prodPic = Event::find($lastId);
+
+       $prodPic->image = $picUrl;
+       $prodPic-> save();  
 
        
        return redirect('/event/save')->with('message','Амжилттай хадгалагдлаа');
@@ -40,7 +59,7 @@ class EventController extends Controller
        
 
        
-        $genc=Review::All();
+        $genc=Event::All();
         return view('admin.event.eventManage', compact('genc'));
     }
 
@@ -57,7 +76,7 @@ class EventController extends Controller
        $subcat -> catid = $request ->catid; 
        $subcat -> subcatname = $request ->subcatname; 
        $subcat -> save();
-       return redirect('/subcat/manage')->with('message','updated');
+       return redirect('/event/manage')->with('message','updated');
     }
 
     public function delete($id){

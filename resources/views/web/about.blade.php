@@ -29,46 +29,20 @@
 
  <div class="container" style="margin-top: 40px;">
     <div class="row">
+
+    @foreach($member as $members)
   <div class="col-lg-3 col-sm-12">
     <div class="card blogs" style="width: 18rem;border:none;">
-        <img src="{{asset('tunga')}}/img/members.png" class="card-img-top" alt="...">
+        <img src="{{$members->image}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Bat</h5>
-          <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</p>
+          <h5 class="card-title">{{$members->name}}</h5>
+          <p class="card-text">{!!$members->info!!}</p>
        
         </div>
       </div>
   </div>
-  <div class="col-lg-3 col-sm-12">
-    <div class="card " style="width: 18rem;border:none;">
-        <img src="{{asset('tunga')}}/img/members.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bat</h5>
-          <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</p>
-       
-        </div>
-      </div>
-  </div>
-  <div class="col-lg-3 col-sm-12">
-    <div class="card" style="width: 18rem;border:none;">
-        <img src="{{asset('tunga')}}/img/members.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bat</h5>
-          <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</p>
-        
-        </div>
-      </div>
-  </div>
-  <div class="col-lg-3 col-sm-12">
-    <div class="card" style="width: 18rem;border:none;">
-        <img src="{{asset('tunga')}}/img/members.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bat</h5>
-          <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</p>
-       
-        </div>
-      </div>
-  </div>
+    @endforeach
+ 
 </div>
  </div>
 

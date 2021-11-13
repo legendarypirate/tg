@@ -32,6 +32,17 @@
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
 							<i class="la la-user"></i>
+							<span class="nav-text">Үйл явдал</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{url('/event/manage')}}">Устгах засах</a></li>
+                            <li><a href="{{url('/event/save')}}">Нэмэх</a></li>
+                         
+                           
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+							<i class="la la-user"></i>
 							<span class="nav-text">Сэтгэгдэл</span>
 						</a>
                         <ul aria-expanded="false">
