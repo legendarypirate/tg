@@ -39,6 +39,12 @@ class WebController extends Controller
         return view('web.contact');
     }  
     
+    public function event(Request $request)
+    {
+      
+        return view('web.event');
+    }  
+    
 
     public function mypage(Request $request)
     {

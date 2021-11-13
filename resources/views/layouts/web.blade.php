@@ -3,12 +3,48 @@
       
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
         <link href="{{asset('tunga')}}/css/app.css"  rel="stylesheet" >
+        <link href="{{asset('tunga')}}/css/style.css"  rel="stylesheet" >
+        <link href="{{asset('tunga')}}/css/style.scss"  rel="stylesheet" >
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.js"></script>
         <style>
 
+.grayscale {
+  border: 0px solid black;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  /* For Webkit browsers */
+  filter: gray;
+  /* For IE 6 - 9 */
+  -webkit-transition: all .6s ease;
+  /* Transition for Webkit browsers */
+}
+.grayscale:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  filter: none;
+}
+#owl-demo .owl-item {
+  margin: 3px;
+}
+#owl-demo .owl-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+       
 @media (min-width: 768px) {
     
     .carousel-inner .carousel-item-end.active,
@@ -61,7 +97,7 @@
             </ul>
           </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Үйл явдлууд</a>
+            <a class="nav-link active" aria-current="page" href="{{route('event')}}">Үйл явдлууд</a>
           </li>
        
           <li class="nav-item">
@@ -130,14 +166,28 @@
                  </div>
         </div>
     </div>    
+    <script>
 
+$(document).ready(function() {
+
+$("#owl-demo").owlCarousel({
+
+  autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+  items: 3,
+  itemsDesktop: [1199, 3],
+  itemsDesktopSmall: [979, 3]
+
+});
+});
+</script>
   <script src="{{asset('tunga')}}/js/app.js"></script>
 
   <script>
     
   </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 </body>
 

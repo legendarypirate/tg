@@ -20,29 +20,34 @@
                 <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" style="top:-140px;">
 
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
+                            <div id="owl-demo">
 
-                                <div class="col-md-4 mb-3 col-sm-4 col-4">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="{{asset('tunga')}}/img/blog.png">
-                                      
-
-                                    </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
                                 </div>
-                                <div class="col-md-4 mb-3 col-sm-4 col-4">
-                                    <div class="card">
-                                    <img class="img-fluid" alt="100%x280" src="{{asset('tunga')}}/img/blog.png">                                      
-                                    </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
                                 </div>
-                                <div class="col-md-4 mb-3 col-sm-4 col-4">
-                                    <div class="card">
-                                    <img class="img-fluid" alt="100%x280" src="{{asset('tunga')}}/img/blog.png">                                     
-                                    </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
+                                </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
+                                </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
+                                </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
+                                </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
+                                </div>
+                                <div class="owl-item grayscale" style="width: 293px;">
+                                <img src="{{asset('tunga')}}/img/blog.png" alt="Owl Image">
                                 </div>
 
                             </div>
-                        </div>
                         <div class="carousel-item">
                             <div class="row">
 
@@ -93,14 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 text-right">
-                        <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                            <i class="fa fa-arrow-left"></i>
-                        </a>
-                        <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                            <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
+              
                 </div>
             </div>
         </div>
