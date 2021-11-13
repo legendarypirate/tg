@@ -1,5 +1,5 @@
 <?php
-
+use App\Slider;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('web.index');
+    $slider=Slider::All();
+    return view('web.index', compact('slider'));
 })->name('index');
 Route::get('/about', 'WebController@about')->name('about');
 Route::get('/blog', 'WebController@blog')->name('blog');
@@ -69,3 +70,11 @@ Auth::routes();
                                                                                                                                         Route::post('/edit','EventController@update');
                                                                                                                                         Route::get('/delete/{id}','EventController@delete');
                                                                                                                                                                                  });
+                                                                                                                                                                                 Route::prefix('product')->group(function(){
+                                                                                                                                                                                    Route::get('/save', 'ProductController@index')->name('event.save');
+                                                                                                                                                                                    Route::post('/save','ProductController@save');
+                                                                                                                                                                                    Route::get('/manage','ProductController@manage');
+                                                                                                                                                                                    Route::get('/edit/{id}','ProductController@edit');
+                                                                                                                                                                                    Route::post('/edit','ProductController@update');
+                                                                                                                                                                                    Route::get('/delete/{id}','ProductController@delete');
+                                                                                                                                                                                                                             });                                                                                                                                                  

@@ -41,6 +41,19 @@
                            
                         </ul>
                     </li>
+
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+							<i class="la la-user"></i>
+							<span class="nav-text">Бүтээгдэхүүн</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{url('/product/manage')}}">Устгах засах</a></li>
+                            <li><a href="{{url('/product/save')}}">Нэмэх</a></li>
+                         
+                           
+                        </ul>
+                    </li>
+
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
 							<i class="la la-user"></i>
 							<span class="nav-text">Сэтгэгдэл</span>
