@@ -30,7 +30,26 @@ class ReviewController extends Controller
        $prodEntry = new Review();
        $prodEntry -> name = $request ->name; 
        $prodEntry -> desc = $request ->desc; 
+       $prodEntry -> image = 'image';
        $prodEntry -> save();  
+
+       $lastId=$prodEntry->id;
+
+       $pictureInfo=$request->file('image');
+         
+       $picName = $lastId.$pictureInfo->getClientOriginalName();
+       
+       $folder="reviewImage/";
+
+       $pictureInfo->move($folder,$picName);
+
+       $picUrl=$folder.$picName;
+
+       $prodPic = Review::find($lastId);
+
+       $prodPic->image = $picUrl;
+       $prodPic-> save();  
+
 
        
        return redirect('/review/save')->with('message','Амжилттай хадгалагдлаа');

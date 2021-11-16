@@ -13,88 +13,21 @@
       <div class="col-12">
           <h3 class="mb-3">Blog </h3>
       </div>
-    
+    @foreach($blog as $blogs)
     <div class="col-lg-3 col-sm-12">
       <div class="card blogs" style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
+          <img src="{{$blogs->image}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-sm-12">
-      <div class="card " style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-sm-12">
-      <div class="card" style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-sm-12">
-      <div class="card" style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{$blogs->title}}</h5>
+            <p class="card-text">{!!$blogs->desc!!}</p>
+            <a href="#" class="btn btn-primary">Унших</a>
           </div>
         </div>
     </div>
 
-    <div class="col-lg-3 col-sm-12">
-      <div class="card blogs" style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-sm-12">
-      <div class="card " style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-sm-12">
-      <div class="card" style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-sm-12">
-      <div class="card" style="width: 18rem;border:none;">
-          <img src="{{asset('tunga')}}/img/blog.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
+  @endforeach
+
+   
   </div>
 </div>
 

@@ -28,8 +28,8 @@ class WebController extends Controller
      */
     public function blog(Request $request)
     {
-      
-        return view('web.blog');
+        $blog=Blog::all();
+        return view('web.blog',compact('blog'));
     }  
 
 

@@ -91,10 +91,10 @@
               Үйлчилгээ
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <?php $product=DB::table('products')->get(); ?>
+             @foreach($product as $products) 
+            <li><a class="dropdown-item" href="#">{{$products->title}}</a></li>
+          @endforeach
             </ul>
           </li>
         <li class="nav-item">
@@ -122,8 +122,8 @@
       
       </form>
       <select class="selectpicker" data-width="fit">
-    <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
-  <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Mongolia</option>
+    <option data-content='<span class="flag-icon flag-icon-us"></span> English'>ENG</option>
+  <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>MNG</option>
 </select>
     </div>
   </div>
