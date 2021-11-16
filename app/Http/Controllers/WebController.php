@@ -11,6 +11,7 @@ use App\Mail\ContactForMail;
 use App\Form;
 use App\Member;
 use App\Blog;
+use App\Event;
 
 use App\Http\Controllers;
 use Validator,Redirect,Response,File,Date;
@@ -41,8 +42,8 @@ class WebController extends Controller
     
     public function event(Request $request)
     {
-      
-        return view('web.event');
+        $event=Event::all();
+        return view('web.event',compact('event'));
     }  
     
 
