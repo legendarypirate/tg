@@ -21,7 +21,7 @@
          
         <h2>{{$events->title}}</h2>
          <div class="date">{{$events->date}}</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+        <p>{{$events->date}}</p>
         <a class="bnt-more" href="javascript:void(0)">More</a>
       </div>
     </div> 
