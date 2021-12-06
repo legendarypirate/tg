@@ -14,6 +14,7 @@ use App\Blog;
 use App\Event;
 
 use App\Http\Controllers;
+use Illuminate\Support\Facades\Session;
 use Validator,Redirect,Response,File,Date;
 use DB, Auth;
 
@@ -24,88 +25,100 @@ class WebController extends Controller
      /**
      * Show the profile for the given user.
      *
-     * 
+     *
      */
     public function blog(Request $request)
     {
         $blog=Blog::all();
         return view('web.blog',compact('blog'));
-    }  
+    }
 
 
-  
+
     public function contact(Request $request)
     {
-      
+
         return view('web.contact');
-    }  
-    
+    }
+
     public function event(Request $request)
     {
         $event=Event::all();
         return view('web.event',compact('event'));
-    }  
-    
+    }
+
+    public function timeline(Request $request)
+    {
+        $event=Event::all();
+        return view('web.timeline',compact('event'));
+    }
+
+    public function change_language(Request $request)
+    {
+        Session::put('lang',$request->language);
+        return response()->json(['status' => true]);
+    }
+
 
     public function mypage(Request $request)
     {
-      
+
         return view('web.mypage');
-    }  
-    
-   
-    
+    }
+
+
+
   public function about()
     {
          $member=Member::All();
         return view('web.about', compact('member'));
-    }  
-    
-    
+    }
+
+
       public function job()
     {
-      
+
           $job=Job::all();
         return view('web.job', compact('job'));
-    }  
- 
- 
+    }
+
+
        public function order()
     {
         return view('web.order');
-    }  
+    }
 
 
- 
-    
+
+
        public function news(Request $request)
-    {   
+    {
         $news = News::paginate(6);
         return view('web.news.index',['news'=>$news]);
     }
 
     public function ndetail(Request $request, $id)
     {
-         
-        
-        $news = News::find($id);  
+
+
+        $news = News::find($id);
         return view( 'web.news.detail', compact('news'));
     }
 
-   
-    
+
+
     /**
      * Show the profile for the given user.
      *
-   
+
      */
         public function donation(Request $request)
-    {   
+    {
         $donation = Donation::All();
         return view('web.donation.index',compact('donation'));
     }
 
-  
+
     public function comment_send(Request $request)
     {
         $rate = $request -> product_rating;
@@ -120,17 +133,17 @@ class WebController extends Controller
             $comments -> user_id = $user_id;
             $comments -> company_id = $company_id;
             $comments -> save();
-            
+
         }
         return Redirect::back();
     }
 
-    
+
     public function sendEmail($name, $email, $body)
     {
         Mailsend::sendCustomer($name, $email, $body);
     }
-    
+
        public function contactstore(Request $request)
     {
         $name = $request->get('name');
@@ -138,25 +151,25 @@ class WebController extends Controller
         $body = $request->get('message');
         $this->sendEmail($name, $email, $body);
         \Log::info($name.' '.$email.' '.$body);
-        
+
         return redirect()->to('/contact')->with('message','Амжилттай илгээгдлээ');
-        
+
     }
-    
-   
-   
+
+
+
     public function detail(Request $request,$id)
     {
-         
-        $blog = Blog::find($id); 
-       
+
+        $blog = Blog::find($id);
+
         return view( 'web.blog.detail', compact('blog'));
     }
 
      /**
      * Show the profile for the given user.
      *
-     * 
+     *
      */
-          
+
 }

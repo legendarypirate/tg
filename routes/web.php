@@ -13,16 +13,22 @@ use App\Review;
 |
 */
 
+Route::post('change_language', 'WebController@change_language')->name('change_language');
+
+
 Route::get('/', function () {
     $slider=Slider::All();
     $product=Product::All();
     $review=Review::All();
     return view('web.index', compact('slider','product','review'));
 })->name('index');
+
 Route::get('/about', 'WebController@about')->name('about');
 Route::get('/blog', 'WebController@blog')->name('blog');
 Route::get('/contact', 'WebController@contact')->name('contact');
 Route::get('/event', 'WebController@event')->name('event');
+Route::get('/timeline', 'WebController@timeline')->name('timeline');
+
 
 
 
@@ -81,4 +87,4 @@ Auth::routes();
                                                                                                                                                                                     Route::get('/edit/{id}','ProductController@edit');
                                                                                                                                                                                     Route::post('/edit','ProductController@update');
                                                                                                                                                                                     Route::get('/delete/{id}','ProductController@delete');
-                                                                                                                                                                                                                             });                                                                                                                                                  
+                                                                                                                                                                                                                             });
